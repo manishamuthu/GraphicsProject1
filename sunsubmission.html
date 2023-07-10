@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+	<br/>
+
+	<input id="slider1" type="range" min="0" max="200" />
+	<br/>
+	<input id="slider2" type="range" min="0" max="6" />
+</body>
+<head>
+  <meta name="description" content="E3b - Working Slider - Better Code">
+  <meta charset="utf-8">
+  <title>Slider Example Better Code</title>
+</head>
+</html>
+<script>
+function setup() {
+var canvas = document.getElementById('myCanvas');
+  var slider1 = document.getElementById('slider1');
+  slider1.value = 0;
+  var slider2 = document.getElementById('slider2');
+  slider2.value = 0;
+function draw() {
+  var context = canvas.getContext('2d');
+    canvas.width = canvas.width;
+    var dx = slider1.value;
+    var dy = slider2.value;
+  
+  function drawSun(color, sunSize) {
+    context.beginPath();
+    context.fillStyle = color;
+   // context.moveTo(150,275);
+    context.arc(225, 275, 100-(sunSize*11), 0, 2 * Math.PI);  
+    context.fill();
+        
+  }
+  function drawBoat()
+  {
+    //context.globalAlpha=.8;
+    context.beginPath();
+    context.fillStyle = "black";
+    context.moveTo(100,310);
+    context.lineTo(180,310);
+    context.lineTo(160,340);
+    context.lineTo(120,340);
+    //context.lineTo(290,80);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "black";
+    context.moveTo(140,310);
+    context.lineTo(140,260);
+    context.lineTo(143,260);
+    context.lineTo(143,310);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "black";
+    context.moveTo(140,260);
+    context.lineTo(110,280);
+    context.lineTo(140,300)
+    context.closePath();
+    context.fill();
+  }
+  function drawRays(color)
+  {
+    //context.globalAlpha=.8;
+    context.beginPath();
+    context.strokeStyle = color;
+    context.moveTo(225,275);
+    context.lineTo(275,110);
+    //context.lineTo(290,80);
+    context.closePath();
+    context.stroke();
+    
+    context.beginPath();
+    context.fillStyle = color;
+    context.moveTo(225,275);
+    context.lineTo(250,80);
+    context.lineTo(240,110);
+    context.closePath();
+    context.fill();
+    
+    
+    context.beginPath();
+    context.strokeStyle = color;
+    context.moveTo(225,275);
+    context.lineTo(210,100);
+    //context.lineTo(240,110);
+    context.closePath();
+    context.stroke();
+    
+    context.beginPath();
+    context.fillStyle = color;
+    context.moveTo(225,275);
+    context.lineTo(180,80);
+    context.lineTo(175,100);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.strokeStyle = color;
+    context.moveTo(225,275);
+    context.lineTo(160,120);
+    //context.lineTo(240,110);
+    context.closePath();
+    context.stroke();
+    
+    context.beginPath();
+    context.fillStyle = color;
+    context.moveTo(225,275);
+    context.lineTo(130,100);
+    context.lineTo(128,120);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.strokeStyle = color;
+    context.moveTo(225,275);
+    context.lineTo(110,140);
+    //context.lineTo(240,110);
+    context.closePath();
+    context.stroke();
+    
+     context.beginPath();
+    context.fillStyle = color;
+    context.moveTo(225,275);
+    context.lineTo(80,140);
+    context.lineTo(90,160);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.strokeStyle = color;
+    context.moveTo(225,275);
+    context.lineTo(90,190);
+    //context.lineTo(240,110);
+    context.closePath();
+    context.stroke();
+    
+     context.beginPath();
+    context.fillStyle = color;
+    context.moveTo(225,275);
+    context.lineTo(80,210);
+    context.lineTo(90,220);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.strokeStyle = color;
+    context.moveTo(225,275);
+    context.lineTo(80,240);
+    //context.lineTo(240,110);
+    context.closePath();
+    context.stroke();
+    
+     context.beginPath();
+    context.fillStyle = color;
+    context.moveTo(225,275);
+    context.lineTo(75,260);
+    context.lineTo(65,250);
+    context.closePath();
+    context.fill();
+    
+        context.beginPath();
+        context.fillStyle = color;
+        context.moveTo(225,275);
+        context.lineTo(275+20,100+20);
+        context.lineTo(290+20,80+20);
+        context.closePath();
+        context.fill();
+    
+        context.beginPath();
+        context.strokeStyle = color;
+        context.moveTo(225,275);
+        context.lineTo(275+40,100+30);
+        //context.lineTo(290+40,80+35);
+        context.closePath();
+        context.stroke();
+        
+        context.beginPath();
+        context.fillStyle = color;
+        context.moveTo(225,275);
+        context.lineTo(275+60,100+50);
+        context.lineTo(290+70,80+ 50);
+        context.closePath();
+        context.fill();
+    
+        context.beginPath();
+        context.strokeStyle = color;
+        context.moveTo(225,275);
+        //context.lineTo(275+60,100+85);
+        context.lineTo(290+60,80+ 85);
+        context.closePath();
+        context.stroke();
+    
+        context.beginPath();
+        context.fillStyle = color;
+        context.moveTo(225,275);
+        context.lineTo(275+65,100+115);
+        context.lineTo(290+65,80+ 120);
+        context.closePath();
+        context.fill();
+    
+        context.beginPath();
+        context.strokeStyle = color;
+        context.moveTo(225,275);
+        context.lineTo(370,230);
+        //context.lineTo(360,240);
+        context.closePath();
+        context.stroke();
+        
+        context.beginPath();
+        context.fillStyle = color;
+        context.moveTo(225,275);
+        context.lineTo(375,250);
+        context.lineTo(290+70,80+ 180);
+        context.closePath();
+        context.fill();
+    
+  }
+  function drawGround(color)
+  {
+    context.beginPath();
+    context.fillStyle = "#1280C1";
+    context.moveTo(50,270);
+    context.lineTo(450,270);
+    context.lineTo(450,375);
+    context.lineTo(50,375);
+    context.closePath();
+    context.fill();  
+  }
+
+  function drawBackGround(color, sliderNum)
+  {
+    if(sliderNum==0)
+    {
+        context.beginPath();
+    context.fillStyle = "#A4168A";
+    context.moveTo(50,0);
+    context.lineTo(450,0);
+    context.lineTo(450,30);
+    context.lineTo(50,30);
+    context.closePath();
+    context.fill();  
+    
+    context.beginPath();
+    context.fillStyle = "#BE0C5C";
+    context.moveTo(50,30);
+    context.lineTo(450,30);
+    context.lineTo(450,60);
+    context.lineTo(50,60);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#C8062B";
+    context.moveTo(50,60);
+    context.lineTo(450,60);
+    context.lineTo(450,90);
+    context.lineTo(50,90);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#F8450A";
+    context.moveTo(50,90);
+    context.lineTo(450,90);
+    context.lineTo(450,120);
+    context.lineTo(50,120);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#F8640A";
+    context.moveTo(50,120);
+    context.lineTo(450,120);
+    context.lineTo(450,150);
+    context.lineTo(50,150);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#F87C0A";
+    context.moveTo(50,150);
+    context.lineTo(450,150);
+    context.lineTo(450,180);
+    context.lineTo(50,180);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#F8940A";
+    context.moveTo(50,180);
+    context.lineTo(450,180);
+    context.lineTo(450,210);
+    context.lineTo(50,210);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#F8AC0A";
+    context.moveTo(50,210);
+    context.lineTo(450,210);
+    context.lineTo(450,240);
+    context.lineTo(50,240);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#F8C80A";
+    context.moveTo(50,240);
+    context.lineTo(450,240);
+    context.lineTo(450,270);
+    context.lineTo(50,270);
+    context.closePath();
+    context.fill();
+    }
+    else if(sliderNum==1)
+    {
+      context.beginPath();
+    context.fillStyle = "#8D16A4";
+    context.moveTo(50,0);
+    context.lineTo(450,0);
+    context.lineTo(450,30);
+    context.lineTo(50,30);
+    context.closePath();
+    context.fill();  
+    
+    context.beginPath();
+    context.fillStyle = "#A4168A";
+    context.moveTo(50,30);
+    context.lineTo(450,30);
+    context.lineTo(450,60);
+    context.lineTo(50,60);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#BE0C5C";
+    context.moveTo(50,60);
+    context.lineTo(450,60);
+    context.lineTo(450,90);
+    context.lineTo(50,90);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#C8062B";
+    context.moveTo(50,90);
+    context.lineTo(450,90);
+    context.lineTo(450,120);
+    context.lineTo(50,120);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#F8450A";
+    context.moveTo(50,120);
+    context.lineTo(450,120);
+    context.lineTo(450,150);
+    context.lineTo(50,150);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#F8640A";
+    context.moveTo(50,150);
+    context.lineTo(450,150);
+    context.lineTo(450,180);
+    context.lineTo(50,180);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#F87C0A";
+    context.moveTo(50,180);
+    context.lineTo(450,180);
+    context.lineTo(450,210);
+    context.lineTo(50,210);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#F8940A";
+    context.moveTo(50,210);
+    context.lineTo(450,210);
+    context.lineTo(450,240);
+    context.lineTo(50,240);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#F8AC0A";
+    context.moveTo(50,240);
+    context.lineTo(450,240);
+    context.lineTo(450,270);
+    context.lineTo(50,270);
+    context.closePath();
+    context.fill();
+    }
+    else if(sliderNum==2)
+    {
+        context.beginPath();
+    context.fillStyle = "#6C16A4";
+    context.moveTo(50,0);
+    context.lineTo(450,0);
+    context.lineTo(450,30);
+    context.lineTo(50,30);
+    context.closePath();
+    context.fill();  
+    
+    context.beginPath();
+    context.fillStyle = "#8D16A4";
+    context.moveTo(50,30);
+    context.lineTo(450,30);
+    context.lineTo(450,60);
+    context.lineTo(50,60);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#A4168A";
+    context.moveTo(50,60);
+    context.lineTo(450,60);
+    context.lineTo(450,90);
+    context.lineTo(50,90);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#BE0C5C";
+    context.moveTo(50,90);
+    context.lineTo(450,90);
+    context.lineTo(450,120);
+    context.lineTo(50,120);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#C8062B";
+    context.moveTo(50,120);
+    context.lineTo(450,120);
+    context.lineTo(450,150);
+    context.lineTo(50,150);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#F8450A";
+    context.moveTo(50,150);
+    context.lineTo(450,150);
+    context.lineTo(450,180);
+    context.lineTo(50,180);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#F8640A";
+    context.moveTo(50,180);
+    context.lineTo(450,180);
+    context.lineTo(450,210);
+    context.lineTo(50,210);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#F87C0A";
+    context.moveTo(50,210);
+    context.lineTo(450,210);
+    context.lineTo(450,240);
+    context.lineTo(50,240);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#F8940A";
+    context.moveTo(50,240);
+    context.lineTo(450,240);
+    context.lineTo(450,270);
+    context.lineTo(50,270);
+    context.closePath();
+    context.fill();
+    }
+    else if(sliderNum==3)
+    {
+        context.beginPath();
+    context.fillStyle = "#4916A4";
+    context.moveTo(50,0);
+    context.lineTo(450,0);
+    context.lineTo(450,30);
+    context.lineTo(50,30);
+    context.closePath();
+    context.fill();  
+    
+    context.beginPath();
+    context.fillStyle = "#6C16A4";
+    context.moveTo(50,30);
+    context.lineTo(450,30);
+    context.lineTo(450,60);
+    context.lineTo(50,60);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#8D16A4";
+    context.moveTo(50,60);
+    context.lineTo(450,60);
+    context.lineTo(450,90);
+    context.lineTo(50,90);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#A4168A";
+    context.moveTo(50,90);
+    context.lineTo(450,90);
+    context.lineTo(450,120);
+    context.lineTo(50,120);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#BE0C5C";
+    context.moveTo(50,120);
+    context.lineTo(450,120);
+    context.lineTo(450,150);
+    context.lineTo(50,150);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#C8062B";
+    context.moveTo(50,150);
+    context.lineTo(450,150);
+    context.lineTo(450,180);
+    context.lineTo(50,180);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#F8450A";
+    context.moveTo(50,180);
+    context.lineTo(450,180);
+    context.lineTo(450,210);
+    context.lineTo(50,210);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#F8640A";
+    context.moveTo(50,210);
+    context.lineTo(450,210);
+    context.lineTo(450,240);
+    context.lineTo(50,240);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#F87C0A";
+    context.moveTo(50,240);
+    context.lineTo(450,240);
+    context.lineTo(450,270);
+    context.lineTo(50,270);
+    context.closePath();
+    context.fill();
+    }
+     else if(sliderNum==4)
+    {
+        context.beginPath();
+    context.fillStyle = "#2E179D";
+    context.moveTo(50,0);
+    context.lineTo(450,0);
+    context.lineTo(450,30);
+    context.lineTo(50,30);
+    context.closePath();
+    context.fill();  
+    
+    context.beginPath();
+    context.fillStyle = "#4916A4";
+    context.moveTo(50,30);
+    context.lineTo(450,30);
+    context.lineTo(450,60);
+    context.lineTo(50,60);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#6C16A4";
+    context.moveTo(50,60);
+    context.lineTo(450,60);
+    context.lineTo(450,90);
+    context.lineTo(50,90);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#8D16A4";
+    context.moveTo(50,90);
+    context.lineTo(450,90);
+    context.lineTo(450,120);
+    context.lineTo(50,120);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#A4168A";
+    context.moveTo(50,120);
+    context.lineTo(450,120);
+    context.lineTo(450,150);
+    context.lineTo(50,150);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#BE0C5C";
+    context.moveTo(50,150);
+    context.lineTo(450,150);
+    context.lineTo(450,180);
+    context.lineTo(50,180);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#C8062B";
+    context.moveTo(50,180);
+    context.lineTo(450,180);
+    context.lineTo(450,210);
+    context.lineTo(50,210);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#F8450A";
+    context.moveTo(50,210);
+    context.lineTo(450,210);
+    context.lineTo(450,240);
+    context.lineTo(50,240);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#F8640A";
+    context.moveTo(50,240);
+    context.lineTo(450,240);
+    context.lineTo(450,270);
+    context.lineTo(50,270);
+    context.closePath();
+    context.fill();
+    }
+     else if(sliderNum==5)
+    {
+        context.beginPath();
+    context.fillStyle = "#11157F";
+    context.moveTo(50,0);
+    context.lineTo(450,0);
+    context.lineTo(450,30);
+    context.lineTo(50,30);
+    context.closePath();
+    context.fill();  
+    
+    context.beginPath();
+    context.fillStyle = "#2E179D";
+    context.moveTo(50,30);
+    context.lineTo(450,30);
+    context.lineTo(450,60);
+    context.lineTo(50,60);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#4916A4";
+    context.moveTo(50,60);
+    context.lineTo(450,60);
+    context.lineTo(450,90);
+    context.lineTo(50,90);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#6C16A4";
+    context.moveTo(50,90);
+    context.lineTo(450,90);
+    context.lineTo(450,120);
+    context.lineTo(50,120);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#8D16A4";
+    context.moveTo(50,120);
+    context.lineTo(450,120);
+    context.lineTo(450,150);
+    context.lineTo(50,150);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#A4168A";
+    context.moveTo(50,150);
+    context.lineTo(450,150);
+    context.lineTo(450,180);
+    context.lineTo(50,180);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#BE0C5C";
+    context.moveTo(50,180);
+    context.lineTo(450,180);
+    context.lineTo(450,210);
+    context.lineTo(50,210);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#C8062B";
+    context.moveTo(50,210);
+    context.lineTo(450,210);
+    context.lineTo(450,240);
+    context.lineTo(50,240);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#F8450A";
+    context.moveTo(50,240);
+    context.lineTo(450,240);
+    context.lineTo(450,270);
+    context.lineTo(50,270);
+    context.closePath();
+    context.fill();
+    }
+    else if(sliderNum==6)
+    {
+        context.beginPath();
+    context.fillStyle = "#0C0F68";
+    context.moveTo(50,0);
+    context.lineTo(450,0);
+    context.lineTo(450,30);
+    context.lineTo(50,30);
+    context.closePath();
+    context.fill();  
+    
+    context.beginPath();
+    context.fillStyle = "#11157F";
+    context.moveTo(50,30);
+    context.lineTo(450,30);
+    context.lineTo(450,60);
+    context.lineTo(50,60);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#2E179D";
+    context.moveTo(50,60);
+    context.lineTo(450,60);
+    context.lineTo(450,90);
+    context.lineTo(50,90);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#4916A4";
+    context.moveTo(50,90);
+    context.lineTo(450,90);
+    context.lineTo(450,120);
+    context.lineTo(50,120);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#6C16A4";
+    context.moveTo(50,120);
+    context.lineTo(450,120);
+    context.lineTo(450,150);
+    context.lineTo(50,150);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#8D16A4";
+    context.moveTo(50,150);
+    context.lineTo(450,150);
+    context.lineTo(450,180);
+    context.lineTo(50,180);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#A4168A";
+    context.moveTo(50,180);
+    context.lineTo(450,180);
+    context.lineTo(450,210);
+    context.lineTo(50,210);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#BE0C5C";
+    context.moveTo(50,210);
+    context.lineTo(450,210);
+    context.lineTo(450,240);
+    context.lineTo(50,240);
+    context.closePath();
+    context.fill();
+    
+    context.beginPath();
+    context.fillStyle = "#C8062B";
+    context.moveTo(50,240);
+    context.lineTo(450,240);
+    context.lineTo(450,270);
+    context.lineTo(50,270);
+    context.closePath();
+    context.fill();
+    }
+  }
+  
+    drawBackGround("pink",dy);
+    drawSun("#FFEF31",dy);
+    drawRays("#FFEF31");
+    drawGround("#04D1E7");
+    context.save();
+    context.translate(dx,0);
+    drawBoat();
+    
+    //drawManipulateRays("purple",dx,dy);
+//   context.save();
+//   context.translate(dx,dy);
+  
+  context.save();
+  //context.scale(dx,dy);
+  //context.setTransform(dx,0,0,1,0,0);
+  //drawRays("pink")
+  context.restore();
+    
+}
+slider1.addEventListener("input",draw);
+slider2.addEventListener("input",draw);
+draw();
+}
+window.onload = setup;
+
+
+</script>
+</html>
